@@ -1,13 +1,8 @@
 package formularios;
-
 import java.awt.Dimension;
 import java.awt.Image;
-import javax.swing.ImageIcon;
+import javax.swing.*;
 
-/**
- *
- * @author Carlos Escobar - ES21001
- */
 public class FormDashboard extends javax.swing.JPanel {
 
     public FormDashboard() {
@@ -23,15 +18,17 @@ public class FormDashboard extends javax.swing.JPanel {
     }
 
     private void ajustarImagen() {
-        ImageIcon icon = new ImageIcon(getClass().getResource("/icon/png/icono digital solution.png"));
-        Image img = icon.getImage();
-
-
-        Image imgScale = img.getScaledInstance(150, 80, Image.SCALE_SMOOTH);
-
-        jLabel4.setIcon(new ImageIcon(imgScale));
-
-        jLabel4.setIcon(new ImageIcon(imgScale));
+        try {
+            ImageIcon icon = new ImageIcon(getClass().getResource("/icon/png/icono digital solution.png"));
+            if (icon.getImageLoadStatus() == java.awt.MediaTracker.COMPLETE) {
+                Image img = icon.getImage();
+                Image imgScale = img.getScaledInstance(150, 80, Image.SCALE_SMOOTH);
+                jLabel4.setIcon(new ImageIcon(imgScale));
+            }
+        } catch (Exception e) {
+            // Si no se puede cargar la imagen, simplemente no se muestra
+            System.out.println("No se pudo cargar la imagen: " + e.getMessage());
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -104,3 +101,4 @@ public class FormDashboard extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }
+
