@@ -6,7 +6,7 @@
 
     <groupId>com.digitalsolution</groupId>
     <artifactId>sistemasPlanillas</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Sistema de Planilla RHU-115</name>
@@ -133,31 +133,25 @@
             <version>1.2.11</version>
         </dependency>
 
-        <!-- Swing Toast Notifications (local JAR) -->
+        <!-- Swing Toast Notifications -->
         <dependency>
             <groupId>com.github.alee792</groupId>
             <artifactId>swing-toast-notifications</artifactId>
             <version>1.0.2</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/swing-toast-notifications-1.0.2.jar</systemPath>
         </dependency>
 
-        <!-- JTattoo (local JAR) -->
+        <!-- JTattoo -->
         <dependency>
             <groupId>com.jtattoo</groupId>
             <artifactId>JTattoo</artifactId>
             <version>1.6.13</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/JTattoo-1.6.13.jar</systemPath>
         </dependency>
 
-        <!-- JSVG (local JAR from lib/) -->
+        <!-- JSVG (svgSalamander) -->
         <dependency>
             <groupId>com.kitfox.svg</groupId>
             <artifactId>svgSalamander</artifactId>
-            <version>1.1.4</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/jsvg-1.4.0.jar</systemPath>
+            <version>1.4.0</version>
         </dependency>
 
         <!-- Apache Batik SVG -->

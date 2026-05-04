@@ -1,6 +1,39 @@
-Este repositorio contiene la aplicación desarrollada para el proyecto de la materia SIC-115 (Universidad de El Salvador): un sistema de planillas automatizado diseñado para la empresa ficticia RHU-115, dedicado a la gestión integral de recursos humanos y planificación de nóminas empresariales.
+Este repositorio contiene la aplicación desarrollada para el proyecto de la materia RHU-115 (Universidad de El Salvador): un sistema de planillas automatizado, dedicado a la gestión integral de recursos humanos y planificación de nóminas empresariales.
 
 La aplicación fue desarrollada utilizando Apache NetBeans 18 como entorno de desarrollo y PostgreSQL como sistema de gestión de base de datos, con el propósito de facilitar el registro y control automatizado de las planillas, empleados y cálculos de nómina de la empresa.
+
+r## Compatibilidad con IDEs
+
+El proyecto es compatible con múltiples entornos de desarrollo integrado (IDEs):
+
+- **Apache NetBeans 18+**: El IDE principal utilizado para el desarrollo
+- **IntelliJ IDEA**: Totalmente compatible (Community y Ultimate Edition)
+- **Eclipse**: Compatible mediante importación de proyecto Maven
+- **VS Code**: Compatible con extensiones Java y Maven
+
+### Ejecución en NetBeans
+1. Abrir NetBeans y seleccionar `File > Open Project`
+2. Navegar a la carpeta del proyecto y abrirlo
+3. Ejecutar con `Run > Run Project` (F6) o clic en el botón ▶
+
+### Ejecución en IntelliJ IDEA
+1. Abrir IntelliJ IDEA y seleccionar `File > Open`
+2. Seleccionar el archivo `pom.xml` del proyecto
+3. Ejecutar con `Run > Run 'Application'` o clic en el botón ▶
+
+### Ejecución por Línea de Comandos
+```bash
+# Compilar el proyecto
+mvn clean compile
+
+# Ejecutar la aplicación
+mvn exec:java -Dexec.mainClass="application.Application"
+
+# Ejecutar con Maven (compila y ejecuta)
+mvn clean compile exec:java -Dexec.mainClass="application.Application"
+```
+
+**Nota:** La primera ejecución descargará todas las dependencias de Maven. Las dependencias locales (JARs en `/lib/`) se instalan automáticamente en el repositorio local de Maven durante la compilación.
 
 El sistema implementa funcionalidades clave para la gestión de recursos humanos y planillas, tales como:
 
